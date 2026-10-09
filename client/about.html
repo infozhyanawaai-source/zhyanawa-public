@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1B4329">
+  <meta name="description" content="Learn about Zhyanawa AI's mission for better mental health, our specialized team, and our global vision for accessible, ethical care.">
+  <link rel="canonical" href="https://zhyanawa.cyou/about">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us — Zhyanawa AI">
+  <meta property="og:description" content="Our Mission for Better Mental Health. Combining human expertise with artificial intelligence to provide secure, compassionate care.">
+  <meta property="og:image" content="assets/zhyanawa-logo-primary.png">
+  <link rel="icon" type="image/png" href="assets/zhyanawa-logo-primary.png">
+  <link rel="apple-touch-icon" href="assets/zhyanawa-logo-primary.png">
+  <title>About Us — Zhyanawa AI</title>
+  <link rel="stylesheet" href="css/main.css?v=21">
+  <link rel="stylesheet" href="css/landing.css?v=22">
+</head>
+<body>
+
+  <!-- ======================================================================
+       SITE HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="/" aria-label="Zhyanawa AI — Home">
+        <img class="brand-logo-img" src="assets/zhyanawa-logo.png" alt="Zhyanawa AI" width="44" height="48" onerror="this.onerror=null; this.src='assets/zhyanawa-logo.jpg';">
+        <span class="sr-only" data-i18n="brandSrOnly">Zhyanawa AI</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a class="nav-link is-active" href="/about" aria-current="page" data-i18n="navAbout">About Us</a>
+        <a class="nav-link" href="/services" data-i18n="navServices">Our Services</a>
+        <a class="nav-link" href="/pricing" data-i18n="navPricing">Pricing</a>
+        <a class="nav-link" href="/emergency" data-i18n="navEmergency">Emergency Support</a>
+        <a class="nav-link" href="/doctors" data-i18n="navDoctors">Find Doctors</a>
+        <a class="nav-link" href="/contact" data-i18n="navContact">Contact Us</a>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Language Switcher: EN, KU, AR -->
+        <div class="lang-dropdown" id="language-switcher">
+          <button class="lang-btn" id="language-trigger" type="button" aria-expanded="false" aria-haspopup="listbox" aria-label="Language selection">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9s-1.2 6.5-3.5 9c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"/></svg>
+            <span data-lang-short>EN</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-menu-list" role="listbox" aria-label="Languages">
+            <button class="lang-option-btn is-selected" type="button" role="option" data-lang="en" aria-selected="true"><span>English</span><small>EN</small></button>
+            <button class="lang-option-btn" type="button" role="option" data-lang="ckb" aria-selected="false"><span>کوردی (سۆرانی)</span><small>KU</small></button>
+            <button class="lang-option-btn" type="button" role="option" data-lang="ar" aria-selected="false"><span>العربية</span><small>AR</small></button>
+          </div>
+        </div>
+
+        <button class="btn nav-login-btn" type="button" data-action="open-auth" data-auth-tab="login" data-i18n="navLogin">Log In</button>
+        <button class="btn nav-signup-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="navSignup">Sign Up</button>
+
+        <button class="mobile-nav-toggle" id="mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="mobile-nav-links">
+        <a class="is-active" href="/about" data-i18n="navAbout">About Us</a>
+        <a href="/services" data-i18n="navServices">Our Services</a>
+        <a href="/pricing" data-i18n="navPricing">Pricing</a>
+        <a href="/emergency" data-i18n="navEmergency">Emergency Support</a>
+        <a href="/doctors" data-i18n="navDoctors">Find Doctors</a>
+        <a href="/contact" data-i18n="navContact">Contact Us</a>
+        <div class="mobile-auth-actions" style="display: flex; gap: 10px; margin-top: 14px; width: 100%;">
+          <button class="btn nav-login-btn" type="button" style="flex: 1;" data-action="open-auth" data-auth-tab="login" data-i18n="navLogin">Log In</button>
+          <button class="btn nav-signup-btn" type="button" style="flex: 1;" data-action="open-auth" data-auth-tab="signup" data-i18n="navSignup">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         ABOUT US SECTION (IMG-20261007-WA0055.jpg)
+         "Our Mission for Better Mental Health" -> "Who We Are"
+         ====================================================================== -->
+    <section class="about-section" id="about" aria-labelledby="about-title" style="padding-top: 60px;">
+      <div class="container">
+        <div class="section-header-block">
+          <h1 id="about-title" data-i18n="aboutMissionTitle">Zhyanawa</h1>
+          <p data-i18n="aboutMissionSub">For better mental health</p>
+        </div>
+
+        <div class="about-cards-grid">
+          <!-- Card 1: Our Vision -->
+          <article class="about-card">
+            <div class="card-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="aboutVisionTitle">Our Vision</h3>
+            <p data-i18n="aboutVisionDesc">To pioneer ethical, AI-driven mental health support across the region, making private, compassionate, and stigma-free psychological care universally accessible in Kurdish, Arabic, and English.</p>
+          </article>
+
+          <!-- Card 2: Our Mission -->
+          <article class="about-card">
+            <div class="card-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m9 12 2 2 4-4"/>
+                <path d="M12 2a10 10 0 0 0-7.07 17.07l1.41-1.41"/>
+              </svg>
+            </div>
+            <h3 data-i18n="aboutMissionHeading">Our Mission</h3>
+            <p data-i18n="aboutMissionDesc">To bridge the mental healthcare divide by delivering 24/7 intelligent, culturally localized emotional guidance, evidence-based self-care tools, and secure crisis interventions while maintaining absolute confidentiality.</p>
+          </article>
+        </div>
+
+        <!-- Meet Our Leadership Team Section -->
+        <div class="about-leadership-section" style="margin-top: 75px;">
+          <h2 class="subhead-centered" data-i18n="aboutLeadershipTitle" style="margin-bottom: 36px;">Meet Our Leadership Team</h2>
+
+          <div class="leadership-team-grid">
+            <!-- Member 1: Gashbin Surchi -->
+            <article class="team-member-card">
+              <div class="team-member-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <h3 class="team-member-name" data-i18n="teamMember1Name">Gashbin Surchi</h3>
+              <p class="team-member-title" data-i18n="teamMember1Title">Founder & Vision Lead</p>
+            </article>
+
+            <!-- Member 2: Savo Abdulrahman -->
+            <article class="team-member-card">
+              <div class="team-member-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <h3 class="team-member-name" data-i18n="teamMember2Name">Savo Abdulrahman</h3>
+              <p class="team-member-title" data-i18n="teamMember2Title">Lead Product Designer (UI/UX)</p>
+            </article>
+
+            <!-- Member 3: Ahmed Mohammed -->
+            <article class="team-member-card">
+              <div class="team-member-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <h3 class="team-member-name" data-i18n="teamMember3Name">Ahmed Mohammed</h3>
+              <p class="team-member-title" data-i18n="teamMember3Title">Lead Software & AI Engineer</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER (SAVOX-STYLE CENTERED DESIGN WITH BRAND PALETTE)
+       ====================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-centered-wrapper">
+      <div class="footer-brand-crest">
+        <img class="footer-brand-logo-img" src="assets/zhyanawa-logo-white.png" alt="Zhyanawa" width="56" height="48" onerror="this.onerror=null; this.src='assets/zhyanawa-logo.png';">
+      </div>
+
+      <h2 class="footer-main-title" data-i18n="footerConnectTitle">Connect With Zhyanawa</h2>
+      <p class="footer-main-subtitle" data-i18n="footerConnectDesc">Compassionate mental health support and ethical AI. Get in touch with us directly:</p>
+
+      <!-- Direct Quick Action Contacts (Phone & Email Only) -->
+      <div class="footer-direct-icons" aria-label="Direct contact methods">
+        <a class="footer-direct-btn" href="tel:07701456780" aria-label="Call 07701456780" title="07701456780">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 2a9 9 0 0 1 9 9" />
+            <path d="M13 6a5 5 0 0 1 5 5" />
+            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+          </svg>
+        </a>
+        <a class="footer-direct-btn" href="mailto:info@zhyanawa.com" aria-label="Email info@zhyanawa.com" title="info@zhyanawa.com">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Website Core Information: Inquiries Email, Phone & Legal Links -->
+      <div class="footer-info-details">
+        <div class="footer-links-row">
+          <a class="footer-text-link" href="mailto:info@zhyanawa.com">info@zhyanawa.com</a>
+          <span class="footer-dot-divider" aria-hidden="true">•</span>
+          <a class="footer-text-link" href="tel:07701456780">07701456780</a>
+          <span class="footer-dot-divider" aria-hidden="true">•</span>
+<a class="footer-text-link" href="/privacy" data-i18n="footerLegalLinks">Privacy Policy & Legal</a>
+        </div>
+      </div>
+
+      <!-- Automatically Renewing Annual Copyright -->
+      <div class="footer-copyright-row">
+        <span data-i18n="footerCopyright">© <span class="auto-year">2026</span> Zhyanawa. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       AUTHENTICATION & ANONYMOUS GUEST MODAL
+       ====================================================================== -->
+  <div class="modal-overlay" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="auth-modal-close" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="modal-header-centered">
+        <img class="modal-brand-logo" src="assets/zhyanawa-logo.png" alt="Zhyanawa AI" width="64" height="55">
+        <h2 id="auth-modal-title" data-i18n="authModalTitle">LOGIN OR ANONYMOUS ACCESS</h2>
+      </div>
+
+      <div class="auth-columns-grid">
+        <!-- Left Panel: Log In / Create Account -->
+        <div class="auth-panel-registered">
+          <div class="auth-tab-buttons" role="tablist">
+            <button class="auth-tab-btn is-active" id="tab-login" role="tab" aria-selected="true" type="button" data-auth-mode="login" data-i18n="tabLogin">Log In</button>
+            <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" type="button" data-auth-mode="signup" data-i18n="tabCreateAccount">Create Account</button>
+          </div>
+
+          <form id="auth-form">
+            <div class="auth-form-fields">
+              <div class="form-group" id="group-fullname" style="display: none;">
+                <label class="sr-only" for="auth-fullname" data-i18n="authFullNamePlaceholder">Full Name</label>
+                <input class="form-input" id="auth-fullname" type="text" placeholder="Full Name" data-i18n-placeholder="authFullNamePlaceholder">
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="auth-email" data-i18n="authEmailPlaceholder">Email Address</label>
+                <input class="form-input" id="auth-email" type="email" required placeholder="Email Address" data-i18n-placeholder="authEmailPlaceholder">
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="auth-password" data-i18n="authPasswordPlaceholder">Password</label>
+                <input class="form-input" id="auth-password" type="password" required placeholder="Password" data-i18n-placeholder="authPasswordPlaceholder">
+              </div>
+
+              <div class="form-group" id="group-confirm-pass" style="display: none;">
+                <label class="sr-only" for="auth-confirm-password" data-i18n="authConfirmPassword">Confirm Password</label>
+                <input class="form-input" id="auth-confirm-password" type="password" placeholder="Confirm Password" data-i18n-placeholder="authConfirmPassword">
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; font-size: 0.85rem;">
+                <a href="#" id="auth-forgot-link" style="color: var(--color-brand-primary); font-weight: 600;" data-i18n="authForgotPass">Forgot your password?</a>
+              </div>
+
+              <button class="btn btn-primary" id="auth-submit-btn" type="submit" style="width: 100%; margin-top: 8px;" data-i18n="tabLogin">Log In</button>
+            </div>
+          </form>
+
+          <div class="auth-social-row">
+            <span data-i18n="authOrSocial">Or log in with:</span>
+            <div class="auth-social-icons">
+              <button class="social-icon-btn" type="button" aria-label="Sign in with Google">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+              </button>
+              <button class="social-icon-btn" type="button" aria-label="Sign in with Apple">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.65-1.07 1.72-.94 2.74 1 .08 2.02-.49 2.64-1.24z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Panel: Anonymous Guest Access -->
+        <div class="auth-panel-anonymous">
+          <div>
+            <h3 data-i18n="authAnonymousTitle">ANONYMOUS GUEST ACCESS</h3>
+            <p data-i18n="authAnonymousDesc">100% Privacy & Anonymity. No email, no name. Immediate confidential support without identity. Guest profiles do not store long-term history but are instantly available.</p>
+            <div class="anonymous-icons-row">
+              <div class="anonymous-icon-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span data-i18n="guestUserLabel">Sign Up as Guest</span>
+              </div>
+              <div class="anonymous-icon-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span data-i18n="guestShieldLabel">Secure Guest Access</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-guest-full" id="btn-guest-enter" type="button" data-i18n="authGuestBtn">CONTINUE AS ANONYMOUS GUEST</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- ======================================================================
+       WELLNESS TOOLKIT MODAL (Interactive 4-7-8 Breathing & Mood Check-In)
+       ====================================================================== -->
+  <div class="modal-overlay" id="wellness-modal" role="dialog" aria-modal="true" aria-labelledby="wellness-modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="wellness-modal-close" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="modal-header-centered">
+        <img class="modal-brand-logo" src="assets/zhyanawa-logo.png" alt="Zhyanawa AI" width="64" height="55" onerror="this.onerror=null; this.src='assets/zhyanawa-logo.jpg';">
+        <h2 id="wellness-modal-title" data-i18n="wellnessModalTitle">Wellness Tool Library</h2>
+      </div>
+
+      <div class="wellness-tool-tabs">
+        <button class="wellness-tab-pill is-active" id="tab-breathing-pill" type="button" data-tool="breathing" data-i18n="tabBreathing">4-7-8 Breathing</button>
+        <button class="wellness-tab-pill" id="tab-mood-pill" type="button" data-tool="mood" data-i18n="tabMoodCheck">Daily Mood Check</button>
+      </div>
+
+      <!-- Breathing Tab View -->
+      <div class="breathing-console" id="wellness-breathing-view">
+        <div class="breath-circle-container">
+          <div class="breath-inner-orb" id="modal-breath-orb">
+            <span class="breath-phase-text" id="modal-breath-phase" data-i18n="breathReady">Ready</span>
+            <span class="breath-seconds-counter" id="modal-breath-counter" data-i18n="breathCounterInit">4·7·8</span>
+          </div>
+        </div>
+        <p data-i18n="breathInstructions" style="color: var(--color-text-body); max-width: 440px; text-align: center; margin-bottom: 24px;">
+          Breathe in through your nose for 4s, hold for 7s, and gently exhale through your mouth for 8s.
+        </p>
+        <button class="btn btn-primary" id="modal-breath-toggle" type="button">
+          <span data-i18n="btnStartBreathing">Start Breathing Exercise</span>
+        </button>
+      </div>
+
+      <!-- Mood Check Tab View -->
+      <div class="mood-console" id="wellness-mood-view" style="display: none;">
+        <p style="font-weight: 700; color: var(--color-brand-primary);" data-i18n="moodPrompt">Select how you are feeling right now:</p>
+        <div class="mood-faces-row">
+          <!-- Calm -->
+          <button class="mood-face-btn is-active" type="button" data-mood-index="0" aria-label="Calm">
+            <span class="mood-face-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mood-svg-icon mood-icon-calm">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2.5 4 2.5 4-2.5"/>
+                <line x1="9" y1="9.5" x2="9.01" y2="9.5" stroke-width="2.5"/>
+                <line x1="15" y1="9.5" x2="15.01" y2="9.5" stroke-width="2.5"/>
+              </svg>
+            </span>
+            <span class="mood-face-label" data-i18n="moodCalm">Calm</span>
+          </button>
+          <!-- Uneasy -->
+          <button class="mood-face-btn" type="button" data-mood-index="1" aria-label="Uneasy">
+            <span class="mood-face-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mood-svg-icon mood-icon-uneasy">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="8.5" y1="15" x2="15.5" y2="15"/>
+                <line x1="9" y1="9.5" x2="9.01" y2="9.5" stroke-width="2.5"/>
+                <line x1="15" y1="9.5" x2="15.01" y2="9.5" stroke-width="2.5"/>
+              </svg>
+            </span>
+            <span class="mood-face-label" data-i18n="moodUneasy">Uneasy</span>
+          </button>
+          <!-- Stressed -->
+          <button class="mood-face-btn" type="button" data-mood-index="2" aria-label="Stressed">
+            <span class="mood-face-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mood-svg-icon mood-icon-stressed">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16 16s-1.5-2-4-2-4 2-4 2"/>
+                <line x1="8.5" y1="8.5" x2="10.5" y2="10"/>
+                <line x1="15.5" y1="8.5" x2="13.5" y2="10"/>
+              </svg>
+            </span>
+            <span class="mood-face-label" data-i18n="moodStressed">Stressed</span>
+          </button>
+          <!-- Overwhelmed -->
+          <button class="mood-face-btn" type="button" data-mood-index="3" aria-label="Overwhelmed">
+            <span class="mood-face-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mood-svg-icon mood-icon-overwhelmed">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8.5 16s1.5-1.5 3.5-1.5 3.5 1.5 3.5 1.5"/>
+                <path d="m8.5 9 2 2m-2 0 2-2"/>
+                <path d="m13.5 9 2 2m-2 0 2-2"/>
+              </svg>
+            </span>
+            <span class="mood-face-label" data-i18n="moodOverwhelmed">Overwhelmed</span>
+          </button>
+          <!-- In Crisis -->
+          <button class="mood-face-btn" type="button" data-mood-index="4" aria-label="In Crisis">
+            <span class="mood-face-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mood-svg-icon mood-icon-crisis">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m12 7-1.5 3.5h3L12 14"/>
+                <line x1="12" y1="16.5" x2="12.01" y2="16.5" stroke-width="2.5"/>
+              </svg>
+            </span>
+            <span class="mood-face-label" data-i18n="moodCrisis">In Crisis</span>
+          </button>
+        </div>
+
+        <div class="mood-recommendation-box">
+          <div class="mood-rec-title" data-i18n="recTitle">Personalized Recommendation</div>
+          <div class="mood-rec-action" id="modal-mood-rec-text" data-i18n="recCalm">Maintain your balance with 5 minutes of mindful gratitude.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <span>Notification</span>
+  </div>
+
+  <script src="js/i18n.js?v=22"></script>
+  <script src="js/landing.js?v=22"></script>
+</body>
+</html>

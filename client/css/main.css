@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   KURDISH TYPOGRAPHY — RUDAW FONTS
+   rudawregular2.ttf (Regular 400), rudawbold.ttf (Bold 700)
+   ========================================================================== */
+@font-face {
+  font-family: 'Rudaw';
+  src: url('../fonts/rudawregular2.ttf?v=5') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rudaw';
+  src: url('../fonts/rudawregular2.ttf?v=5') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rudaw';
+  src: url('../fonts/rudawbold.ttf?v=5') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rudaw';
+  src: url('../fonts/rudawbold.ttf?v=5') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rudaw';
+  src: url('../fonts/rudawbold.ttf?v=5') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RudawBold';
+  src: url('../fonts/rudawbold.ttf?v=5') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RudawBold';
+  src: url('../fonts/rudawbold.ttf?v=5') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Sampled directly from user's Library Photos & Mockups */
+  --color-brand-primary: #1b4329;       /* Exact deep forest green used for titles & brand */
+  --color-brand-dark: #12301d;          /* Darker forest green */
+  --color-brand-button: #244e33;        /* Exact pill button green */
+  --color-brand-button-hover: #1c3e29;  /* Darker pill button green */
+  --color-brand-border: #234e35;        /* Exact card outline green stroke */
+  --color-brand-border-soft: rgba(35, 78, 53, 0.28);
+  --color-brand-border-focus: rgba(35, 78, 53, 0.65);
+
+  --color-linen-bg: #EDE5CD;            /* Warm sand linen tone requested by user */
+  --color-linen-card: #f6eed7;          /* Subtle light linen card surface */
+  --color-white-card: rgba(255, 255, 255, 0.75); /* Modern translucent card surface */
+  --color-white-solid: #ffffff;
+
+  --color-footer-bg: #191d1a;           /* Dark charcoal footer bar */
+  --color-footer-border: #2c322d;
+  --color-crisis-bar: #232724;          /* Bottom crisis hotline banner */
+
+  --color-text-headline: #1b4329;       /* All primary headings are deep green */
+  --color-text-body: #2c3831;           /* Highly legible charcoal body text */
+  --color-text-muted: #56645c;          /* Secondary descriptions */
+  --color-text-light: #EDE5CD;          /* Light linen text for dark elements */
+
+  --font-family-latin: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-family-kurdish: 'Rudaw', Tahoma, 'Segoe UI', system-ui, sans-serif;
+  --font-family-kurdish-bold: 'RudawBold', 'Rudaw', Tahoma, 'Segoe UI', system-ui, sans-serif;
+  --font-family-arabic: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, system-ui, sans-serif;
+  --font-body: var(--font-family-latin);
+  --font-heading: var(--font-family-latin);
+
+  --container-max: 1140px;
+  --container-wide: 1240px;
+  --header-height: 72px;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  --shadow-sm: 0 4px 16px rgba(27, 67, 41, 0.05);
+  --shadow-md: 0 10px 30px rgba(27, 67, 41, 0.08);
+  --shadow-lg: 0 20px 50px rgba(27, 67, 41, 0.12);
+
+  --transition-quick: 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-smooth: 320ms cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 20px);
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-linen-bg);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.6) 0%, transparent 65%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.038'/%3E%3C/svg%3E");
+  color: var(--color-text-body);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ==========================================================================
+   LANGUAGE & SCRIPT CONFIGURATION
+   Native OpenType cursive shaping for Kurdish Sorani & Arabic.
+   letter-spacing is strictly normal so HarfBuzz / DirectWrite never splits letters.
+   ========================================================================== */
+
+/* Kurdish Sorani (ckb / ku) — Uses user-provided Rudaw fonts */
+html[lang="ckb"],
+html[lang="ku"] {
+  --font-body: var(--font-family-kurdish);
+  --font-heading: var(--font-family-kurdish-bold);
+}
+
+html[lang="ckb"] body,
+html[lang="ku"] body {
+  font-family: var(--font-family-kurdish);
+  line-height: 1.75;
+}
+
+html[lang="ckb"] h1,
+html[lang="ckb"] h2,
+html[lang="ckb"] h3,
+html[lang="ckb"] h4,
+html[lang="ckb"] h5,
+html[lang="ckb"] h6,
+html[lang="ku"] h1,
+html[lang="ku"] h2,
+html[lang="ku"] h3,
+html[lang="ku"] h4,
+html[lang="ku"] h5,
+html[lang="ku"] h6 {
+  font-family: var(--font-family-kurdish-bold);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+html[lang="ckb"] .btn,
+html[lang="ckb"] .nav-signup-btn,
+html[lang="ckb"] .nav-login-btn,
+html[lang="ckb"] .btn-hero,
+html[lang="ku"] .btn,
+html[lang="ku"] .nav-signup-btn,
+html[lang="ku"] .nav-login-btn,
+html[lang="ku"] .btn-hero {
+  font-family: var(--font-family-kurdish-bold) !important;
+  font-weight: 700 !important;
+}
+
+/* Arabic (ar) — Uses IBM Plex Sans Arabic for complete character & tashkeel support */
+html[lang="ar"] {
+  --font-body: var(--font-family-arabic);
+  --font-heading: var(--font-family-arabic);
+}
+
+html[lang="ar"] body {
+  font-family: var(--font-family-arabic);
+  line-height: 1.75;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+  font-family: var(--font-family-arabic);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+html[lang="ar"] .btn,
+html[lang="ar"] .nav-signup-btn,
+html[lang="ar"] .nav-login-btn,
+html[lang="ar"] .btn-hero {
+  font-family: var(--font-family-arabic) !important;
+  font-weight: 700 !important;
+}
+
+/* Universal RTL Cursive Preservation & Layout */
+html[dir="rtl"] {
+  text-align: start;
+}
+
+/* Form controls and links inherit language fonts */
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+/* Ensure all RTL cursive text has normal letter-spacing and word-spacing
+   so OpenType contextual glyphs (init, medi, fina) connect without seam or split */
+html[dir="rtl"],
+html[dir="rtl"] *,
+html[lang="ckb"],
+html[lang="ckb"] *,
+html[lang="ku"],
+html[lang="ku"] *,
+html[lang="ar"],
+html[lang="ar"] * {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+body.modal-open,
+body.menu-open {
+  overflow: hidden;
+}
+
+::selection {
+  background: #c3d9c8;
+  color: #12301d;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+button, a, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  color: var(--color-text-headline);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--container-max));
+  margin-inline: auto;
+}
+
+.container-wide {
+  width: min(calc(100% - 40px), var(--container-wide));
+  margin-inline: auto;
+}
+
+/* Base button styles matching user mockup */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 28px;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: transform var(--transition-quick), background-color var(--transition-quick), box-shadow var(--transition-quick), border-color var(--transition-quick);
+  border: 1.5px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--color-brand-button);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(36, 78, 51, 0.22);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-button-hover);
+  box-shadow: 0 8px 22px rgba(36, 78, 51, 0.32);
+}
+
+.btn-outline {
+  border-color: var(--color-brand-border);
+  background-color: transparent;
+  color: var(--color-brand-primary);
+}
+
+.btn-outline:hover {
+  background-color: rgba(35, 78, 53, 0.08);
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Responsive container adjustments for all mobile devices & tablets */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 68px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+  .container,
+  .container-wide {
+    width: min(calc(100% - 32px), var(--container-max));
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-height: 60px;
+  }
+  .container,
+  .container-wide {
+    width: min(calc(100% - 22px), var(--container-max));
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+.btn,
+.nav-link,
+.action-pill,
+.pricing-cta-btn {
+  touch-action: manipulation;
+}

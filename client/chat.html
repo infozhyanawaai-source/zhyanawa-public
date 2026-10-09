@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1B4329">
+  <meta name="description" content="Zhyanawa AI Chatbot — 24/7 Confidential Cognitive Behavioral & Mindfulness Therapy Support.">
+  <title>Zhyanawa AI — 24/7 AI Chatbot Therapy</title>
+  <link rel="icon" type="image/jpeg" href="assets/zhyanawa-logo-primary.jpg">
+  <link rel="apple-touch-icon" href="assets/zhyanawa-logo-primary.jpg">
+  <link rel="stylesheet" href="css/main.css?v=21">
+  <link rel="stylesheet" href="css/chat.css?v=26">
+</head>
+<body>
+  <div class="chat-app-root">
+    <!-- ======================================================================
+         TOP HEADER BAR (IMG-20261007-WA0037.jpg)
+         Left: Brain Logo + ZHYANAWA AI
+         Right: Home, Profile, Log Out + Language Switcher
+         ====================================================================== -->
+    <header class="chat-header" id="chat-header">
+      <div class="chat-header-start">
+        <button class="sidebar-toggle-btn" id="sidebar-toggle" type="button" aria-label="Toggle chat history" aria-controls="chat-sidebar" aria-expanded="false" title="Toggle chat history">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+        <a class="chat-header-brand" href="/" aria-label="Zhyanawa AI Home">
+          <img class="chat-brand-logo-img" src="assets/zhyanawa-logo-symbol.png" alt="Zhyanawa AI logo" onerror="this.style.display='none'">
+          <span class="chat-brand-text" data-i18n="brandName">ZHYANAWA AI</span>
+        </a>
+      </div>
+
+      <div class="chat-header-actions">
+        <!-- Navigation Links matching user mockup: Home, Profile, Log Out -->
+        <nav class="chat-nav-links" aria-label="App Navigation">
+          <a class="chat-nav-item" href="/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span data-i18n="chatNavHome">Home</span>
+          </a>
+
+          <button class="chat-nav-item chat-profile-trigger" id="nav-profile-btn" type="button" aria-label="Profile">
+            <span class="chat-account-avatar" data-profile-avatar aria-hidden="true">
+              <img data-profile-image alt="" referrerpolicy="no-referrer" hidden>
+              <span data-profile-initial>P</span>
+            </span>
+            <span class="chat-profile-name" data-profile-name data-i18n="chatNavProfile">Profile</span>
+          </button>
+          <button class="chat-nav-item" id="nav-doctor-code-btn" type="button" aria-label="Doctor access code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span data-i18n="chatNavDoctorCode">Doctor Code</span>
+          </button>
+
+          <button class="chat-nav-item" id="nav-logout-btn" type="button" aria-label="Log out">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+            <span data-i18n="chatNavLogout">Log Out</span>
+          </button>
+        </nav>
+
+        <!-- Trilingual Switcher (EN, KU, AR) -->
+        <div class="chat-lang-dropdown" id="chat-lang-dropdown">
+          <button class="chat-lang-btn" id="chat-lang-trigger" type="button" aria-expanded="false" aria-label="Select language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9s-1.2 6.5-3.5 9c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"/></svg>
+            <span id="chat-current-lang-code">EN</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="chat-lang-menu" role="listbox">
+            <button class="chat-lang-option is-selected" type="button" data-lang="en"><span>English</span><small>EN</small></button>
+            <button class="chat-lang-option" type="button" data-lang="ckb"><span>کوردی</span><small>KU</small></button>
+            <button class="chat-lang-option" type="button" data-lang="ar"><span>العربية</span><small>AR</small></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================================
+         MAIN WORKSPACE: SIDEBAR + CHAT CANVAS
+         ====================================================================== -->
+    <div class="chat-workspace" id="chat-workspace">
+      <!-- Sidebar (Flexible position, collapsible) -->
+      <aside class="chat-sidebar" id="chat-sidebar" aria-label="Chat history and sessions">
+        <div class="sidebar-top-bar">
+          <button class="btn-new-chat" id="btn-new-chat" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span data-i18n="chatNewChat">+ New Chat</span>
+          </button>
+          <div class="sidebar-top-controls">
+            <button class="btn-dock-side" id="btn-dock-side" type="button" aria-label="Switch sidebar side" title="Move sidebar left/right">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 8 4 4-4 4M6 16l-4-4 4-4M2 12h20"/></svg>
+            </button>
+            <button class="sidebar-close-btn" id="sidebar-close-btn" type="button" aria-label="Collapse sidebar" title="Collapse sidebar">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- "Recent Chats" Heading -->
+        <div class="recent-chats-header">
+          <span class="recent-chats-title" data-i18n="chatRecentChats">Recent Chats</span>
+        </div>
+
+        <!-- Populated from the signed-in account or this temporary guest session. -->
+        <div class="recent-chats-list" role="list"></div>
+
+        <!-- Sidebar Footer -->
+        <div class="chat-sidebar-footer">
+          <button class="chat-sidebar-profile" id="sidebar-profile-btn" type="button" aria-label="Profile">
+            <span class="chat-account-avatar chat-sidebar-profile-avatar" data-profile-avatar aria-hidden="true">
+              <img data-profile-image alt="" referrerpolicy="no-referrer" hidden>
+              <span data-profile-initial>P</span>
+            </span>
+            <span class="chat-sidebar-profile-copy">
+              <strong data-profile-name data-i18n="chatNavProfile">Profile</strong>
+              <small id="account-status-text" data-i18n="chatAnonymousBadge">Anonymous Guest Session</small>
+            </span>
+            <svg class="chat-sidebar-profile-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="btn-clear-history" id="btn-clear-history" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            <span data-i18n="chatClearHistory">Clear History</span>
+          </button>
+        </div>
+      </aside>
+
+      <button class="chat-sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Close chat history" tabindex="-1"></button>
+
+      <!-- Main Chat Canvas -->
+      <main class="chat-main-canvas" id="chat-main-canvas">
+        <div class="chat-messages-container" id="chat-messages-container">
+          <!-- ==================================================================
+               CENTER WELCOME STATE (Pure Transparent Icon)
+               ================================================================== -->
+          <div class="chat-welcome-hero" id="chat-welcome-hero">
+            <!-- Center Brain Logo (pure icon, transparent) -->
+            <div class="welcome-logo-container">
+              <img class="welcome-logo-img" src="assets/zhyanawa-logo-symbol.png" alt="Zhyanawa AI brain illustration">
+            </div>
+
+            <!-- "Connected to Zhyanawa AI" -->
+            <h2 class="welcome-connected-title">
+              <span data-i18n="chatConnected">Connected to Zhyanawa AI</span>
+            </h2>
+
+            <!-- 2x2 Suggestion Cards Grid -->
+            <div class="suggestion-cards-grid">
+              <!-- Card 1: Nose/Breathing Icon -> "A breathing exercise?" -->
+              <article class="suggestion-card" data-topic="breathing" role="button" tabindex="0">
+                <div class="suggestion-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M9 11a3 3 0 0 1 6 0c0 2-1.5 3-3 4.5V18" stroke-linecap="round"/>
+                    <path d="M8 18h8M10 21h4" stroke-linecap="round"/>
+                    <path d="M4 14c1.5-1 3-1 4 0M16 14c1-1 2.5-1 4 0" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="suggestion-card-text" data-i18n="chatPrompt1">A breathing exercise?</div>
+              </article>
+
+              <!-- Card 2: Speech Bubble Icon -> "Help me reframe a negative thought?" -->
+              <article class="suggestion-card" data-topic="reframe" role="button" tabindex="0">
+                <div class="suggestion-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/>
+                  </svg>
+                </div>
+                <div class="suggestion-card-text" data-i18n="chatPrompt2">Help me reframe a negative thought?</div>
+              </article>
+
+              <!-- Card 3: Lightbulb Icon -> "Suggest a mindfulness prompt for today?" -->
+              <article class="suggestion-card" data-topic="mindfulness" role="button" tabindex="0">
+                <div class="suggestion-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M9 18h6M10 22h4"/>
+                    <path d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.8 3.5 6h7c2.1-1.2 3.5-3.4 3.5-6a7 7 0 0 0-7-7Z"/>
+                  </svg>
+                </div>
+                <div class="suggestion-card-text" data-i18n="chatPrompt3">Suggest a mindfulness prompt for today?</div>
+              </article>
+
+              <!-- Card 4: Briefcase Icon -> "How to better manage work stress?" -->
+              <article class="suggestion-card" data-topic="stress" role="button" tabindex="0">
+                <div class="suggestion-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  </svg>
+                </div>
+                <div class="suggestion-card-text" data-i18n="chatPrompt4">How to better manage work stress?</div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Dynamic Active Conversation Thread -->
+          <div class="chat-conversation-thread" id="chat-conversation-thread"></div>
+        </div>
+
+        <!-- ==================================================================
+             FLOATING CHAT INPUT CAPSULE
+             ================================================================== -->
+        <div class="chat-input-wrapper">
+          <div class="chat-input-capsule">
+            <textarea
+              class="chat-input-field"
+              id="chat-input-field"
+              rows="1"
+              maxlength="10000"
+              wrap="soft"
+              dir="auto"
+              enterkeyhint="send"
+              autocomplete="off"
+              placeholder="Share a feeling, mental-health concern, or ask for an exercise..."
+              data-i18n-placeholder="chatInputPlaceholder"
+              aria-label="Type your message"></textarea>
+
+            <div class="chat-input-actions">
+              <button class="chat-send-btn" id="chat-send-btn" type="button" aria-label="Send message">
+                <span data-i18n="chatSend">Send</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+
+              <button class="chat-mic-btn" id="chat-mic-btn" type="button" aria-label="Voice input" title="Voice dictation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       PROFILE & CONFIDENTIAL SESSION MODAL
+       ====================================================================== -->
+  <div class="modal-overlay" id="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+    <div class="profile-modal-box">
+      <button class="modal-close-btn" id="profile-modal-close" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="chat-account-avatar profile-modal-avatar" data-profile-avatar aria-hidden="true">
+          <img data-profile-image alt="" referrerpolicy="no-referrer" hidden>
+          <span data-profile-initial>P</span>
+        </span>
+        <h2 id="profile-title" style="margin-bottom: 6px; font-size: 1.35rem; color: var(--color-brand-primary);">Guest Profile</h2>
+        <p id="profile-subtitle" style="font-size: 0.88rem; color: var(--color-text-muted);">Guest conversations stay only in this browser tab.</p>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.7); border: 1px solid var(--color-brand-border-soft); border-radius: var(--radius-md); padding: 18px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9rem;">
+          <span style="font-weight: 600; color: var(--color-text-body);" data-i18n="chatProfileAccountLabel">Account:</span>
+          <span id="profile-account" style="color: var(--color-brand-primary); font-weight: 700;">Anonymous guest</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9rem;">
+          <span style="font-weight: 600; color: var(--color-text-body);" data-i18n="chatProfileStorageLabel">Chat storage:</span>
+          <span id="profile-storage" style="color: #2e7d32; font-weight: 700;">Temporary browser session</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+          <span style="font-weight: 600; color: var(--color-text-body);" data-i18n="chatProfileRetentionLabel">Data Retention:</span>
+          <span id="profile-retention" style="color: var(--color-text-muted);">Cleared when this tab closes</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px;">
+        <button class="btn btn-outline" id="profile-export-button" style="flex: 1; min-height: 42px;" type="button" data-i18n="chatExportLog">Export Log</button>
+        <button class="btn btn-primary" id="profile-done-button" style="flex: 1; min-height: 42px;" type="button" data-i18n="chatDone">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="doctor-code-modal" role="dialog" aria-modal="true" aria-labelledby="doctor-code-title">
+    <div class="profile-modal-box doctor-code-box">
+      <button class="modal-close-btn" id="doctor-code-close" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="doctor-code-eyebrow">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span data-i18n="doctorCodeEyebrow">Consent-Based Sharing</span>
+      </div>
+      <h2 id="doctor-code-title" data-i18n="doctorCodeTitle">Share a summary with your doctor</h2>
+      <p class="doctor-code-intro" data-i18n="doctorCodeIntro">Create a private code from your saved chats. Your doctor can use it to create a concise clinical handoff.</p>
+
+      <div class="doctor-code-warning">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span data-i18n="doctorCodeWarning">Create a code only when you want a doctor to review your saved conversations. The AI summary may contain mistakes and is not a diagnosis.</span>
+      </div>
+
+      <fieldset class="doctor-code-options">
+        <legend data-i18n="doctorCodeChooseAccess">Choose access</legend>
+        <label class="doctor-code-radio-card">
+          <input type="radio" name="doctor-access-type" value="one_time" checked>
+          <div class="doctor-code-radio-custom" aria-hidden="true"></div>
+          <div class="doctor-code-radio-body">
+            <strong data-i18n="doctorCodeOneTimeTitle">One-time code</strong>
+            <small data-i18n="doctorCodeOneTimeDesc">Works for one successful view.</small>
+          </div>
+        </label>
+        <label class="doctor-code-radio-card">
+          <input type="radio" name="doctor-access-type" value="lifetime">
+          <div class="doctor-code-radio-custom" aria-hidden="true"></div>
+          <div class="doctor-code-radio-body">
+            <strong data-i18n="doctorCodeLifetimeTitle">Reusable code</strong>
+            <small data-i18n="doctorCodeLifetimeDesc">Works until you revoke it.</small>
+          </div>
+        </label>
+      </fieldset>
+
+      <p class="doctor-code-error" id="doctor-code-error" role="alert"></p>
+      <button class="doctor-code-create" id="doctor-code-create" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span data-i18n="doctorCodeGenerateBtn">Generate private code</span>
+      </button>
+
+      <section class="doctor-code-result" id="doctor-code-result" hidden aria-live="polite">
+        <span class="doctor-code-result-label" data-i18n="doctorCodeResultLabel">Your new code</span>
+        <div class="doctor-code-value-wrapper">
+          <strong id="doctor-code-value" dir="ltr"></strong>
+        </div>
+        <div class="doctor-code-result-actions">
+          <button type="button" id="doctor-code-copy" class="doctor-code-action-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span data-i18n="doctorCodeCopyBtn">Copy code</span>
+          </button>
+        </div>
+        <small class="doctor-code-notice" data-i18n="doctorCodeNotice">The full code is shown only now. Share it privately with your doctor.</small>
+      </section>
+
+      <section class="doctor-code-list-section">
+        <div class="doctor-code-list-header">
+          <h3 data-i18n="doctorCodeYourCodes">Your codes</h3>
+          <button type="button" id="doctor-code-refresh" class="doctor-code-refresh-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+            <span data-i18n="doctorCodeRefreshBtn">Refresh</span>
+          </button>
+        </div>
+        <div id="doctor-code-list"><p class="doctor-code-empty" data-i18n="doctorCodeEmptyGuest">Sign in to create and manage doctor codes.</p></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Toast Element -->
+  <div class="chat-toast" id="chat-toast" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <span>Notification</span>
+  </div>
+
+  <script src="js/i18n.js?v=26"></script>
+  <script src="js/doctor-copy.js?v=26"></script>
+  <script src="js/chat.js?v=26"></script>
+</body>
+</html>

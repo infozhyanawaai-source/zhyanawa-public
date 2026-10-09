@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1B4329">
+  <meta name="description" content="Find licensed psychiatrists and mental health specialists in Sulaymaniyah. Connect directly with verified local doctors for in-person evaluations and clinical care.">
+  <link rel="canonical" href="https://zhyanawa.cyou/doctors">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Find Doctors in Sulaymaniyah — Zhyanawa AI">
+  <meta property="og:description" content="Connect directly with verified psychiatrists, child specialists, and clinicians in Sulaymaniyah, Kurdistan Region.">
+  <meta property="og:image" content="assets/zhyanawa-logo-primary.png">
+  <link rel="icon" type="image/png" href="assets/zhyanawa-logo-primary.png">
+  <link rel="apple-touch-icon" href="assets/zhyanawa-logo-primary.png">
+  <title>Find Doctors in Sulaymaniyah — Zhyanawa AI</title>
+  <link rel="stylesheet" href="css/main.css?v=21">
+  <link rel="stylesheet" href="css/landing.css?v=22">
+</head>
+<body>
+
+  <!-- ======================================================================
+       SITE HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="/" aria-label="Zhyanawa AI — Home">
+        <img class="brand-logo-img" src="assets/zhyanawa-logo.png" alt="Zhyanawa AI" width="44" height="48" onerror="this.onerror=null; this.src='assets/zhyanawa-logo.jpg';">
+        <span class="sr-only" data-i18n="brandSrOnly">Zhyanawa AI</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a class="nav-link" href="/about" data-i18n="navAbout">About Us</a>
+        <a class="nav-link" href="/services" data-i18n="navServices">Our Services</a>
+        <a class="nav-link" href="/pricing" data-i18n="navPricing">Pricing</a>
+        <a class="nav-link" href="/emergency" data-i18n="navEmergency">Emergency Support</a>
+        <a class="nav-link is-active" href="/doctors" aria-current="page" data-i18n="navDoctors">Find Doctors</a>
+        <a class="nav-link" href="/contact" data-i18n="navContact">Contact Us</a>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Language Switcher: EN, KU, AR -->
+        <div class="lang-dropdown" id="language-switcher">
+          <button class="lang-btn" id="language-trigger" type="button" aria-expanded="false" aria-haspopup="listbox" aria-label="Language selection">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9s-1.2 6.5-3.5 9c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"/></svg>
+            <span data-lang-short>EN</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-menu-list" id="language-menu" role="listbox">
+            <button class="lang-option-btn is-selected" type="button" data-lang="en" role="option" aria-selected="true">
+              <span>English</span>
+              <span class="lang-code">EN</span>
+            </button>
+            <button class="lang-option-btn" type="button" data-lang="ckb" role="option" aria-selected="false">
+              <span>کوردی</span>
+              <span class="lang-code">KU</span>
+            </button>
+            <button class="lang-option-btn" type="button" data-lang="ar" role="option" aria-selected="false">
+              <span>العربية</span>
+              <span class="lang-code">AR</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn nav-login-btn" type="button" data-action="open-auth" data-auth-tab="login" data-i18n="navLogin">Log In</button>
+        <button class="btn nav-signup-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="navSignup">Sign Up</button>
+
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-links">
+        <a href="/about" data-i18n="navAbout">About Us</a>
+        <a href="/services" data-i18n="navServices">Our Services</a>
+        <a href="/pricing" data-i18n="navPricing">Pricing</a>
+        <a href="/emergency" data-i18n="navEmergency">Emergency Support</a>
+        <a href="/doctors" class="is-active" data-i18n="navDoctors">Find Doctors</a>
+        <a href="/contact" data-i18n="navContact">Contact Us</a>
+        <div class="mobile-auth-actions" style="display: flex; gap: 10px; margin-top: 14px; width: 100%;">
+          <button class="btn nav-login-btn" type="button" style="flex: 1;" data-action="open-auth" data-auth-tab="login" data-i18n="navLogin">Log In</button>
+          <button class="btn nav-signup-btn" type="button" style="flex: 1;" data-action="open-auth" data-auth-tab="signup" data-i18n="navSignup">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         HERO SECTION: FIND DOCTORS IN SULAYMANIYAH
+         ====================================================================== -->
+    <section class="hero-section" id="doctors-hero" aria-labelledby="doctors-hero-title">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title" id="doctors-hero-title" data-i18n="doctorsHeroTitle">Licensed Psychiatrists & Specialists in Sulaymaniyah</h1>
+        <p class="hero-subtitle" data-i18n="doctorsHeroSub">Connect directly with verified mental health experts for in-person evaluations and clinical consultations.</p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         DIRECTORY LISTING & FILTERS SECTION
+         ====================================================================== -->
+    <section class="doctors-page-section" id="doctors-directory" aria-label="Doctors Directory">
+      <div class="container">
+        <!-- Search & Filter Controls -->
+        <div class="doctors-filter-wrapper">
+          <div class="doctor-search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input type="text" id="doctor-search-input" class="doctor-search-input" placeholder="Search doctor name, clinic, or location..." data-i18n-placeholder="doctorsSearchPlaceholder" autocomplete="off" aria-label="Search doctors">
+            <button type="button" id="doctor-search-clear" class="doctor-search-clear" aria-label="Clear search" style="display: none;">&times;</button>
+          </div>
+
+          <div class="filters-container">
+            <!-- Location Filter -->
+            <div class="filter-group">
+              <span class="filter-label">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span data-i18n="filterLocationLabel">Location:</span>
+              </span>
+              <div class="filter-pills" role="radiogroup" aria-label="Filter by location">
+                <button type="button" class="filter-pill is-active" data-filter-type="location" data-filter-val="all" data-i18n="filterLocationAll">All Locations</button>
+                <button type="button" class="filter-pill" data-filter-type="location" data-filter-val="ibrahim-pasha" data-i18n="filterLocationPasha">Ibrahim Pasha St</button>
+                <button type="button" class="filter-pill" data-filter-type="location" data-filter-val="baranan" data-i18n="filterLocationBaranan">Baranān</button>
+                <button type="button" class="filter-pill" data-filter-type="location" data-filter-val="city-center" data-i18n="filterLocationCenter">City Center</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Counter & Directory Header Bar -->
+          <div class="doctors-counter-bar">
+            <span class="doctors-info-heading" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.05rem; color: var(--color-brand-primary);">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span data-i18n="doctorsInfoTitle">Doctors' Information</span>
+            </span>
+            <span id="doctor-results-counter" data-i18n="showingDoctorsCount">Showing 5 verified specialists in Sulaymaniyah</span>
+          </div>
+        </div>
+
+        <!-- Doctors Directory Responsive Grid -->
+        <div class="doctors-grid" id="doctors-cards-grid">
+
+          <!-- ==========================================
+               DOCTOR 1: Dr. Jaafar Omer Ahmed
+               ========================================== -->
+          <article class="doctor-card" data-location="ibrahim-pasha" data-specialties="adult" data-search-terms="dr jaafar omer ahmed specialist psychiatrist julia medical tower darogha square ibrahim pasha sulaymaniyah د. جەعفەر عومەر ئەحمەد پزیشکی پسپۆڕی دەروونی تەلاری جولیا فیلکەی دارۆغا د. جعفر عمر أحمد">
+            <div class="doctor-card-header">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/doctors/dr-jaafar-omer.jpg" alt="Dr. Jaafar Omer Ahmed" class="doctor-avatar-img" loading="lazy">
+              </div>
+              <div class="doctor-header-info">
+                <h3 class="doctor-name" data-i18n="doc1Name">Dr. Jaafar Omer Ahmed</h3>
+                <p class="doctor-spec-title" data-i18n="doc1Title">Specialist Psychiatrist</p>
+                <div class="doctor-tags-row">
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span data-i18n="filterLocationPasha">Ibrahim Pasha St</span>
+                  </span>
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                    <span data-i18n="badgePsychiatrist">Psychiatrist</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-body">
+              <div class="doctor-clinic-item">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M12 7v6"/><path d="M9 10h6"/></svg>
+                <span data-i18n="doc1Clinic">Julia Medical Tower, Darogha Sq, Ibrahim Pasha St, Sulaymaniyah</span>
+              </div>
+              <div class="doctor-phones-item">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <div class="doctor-phones-links">
+                  <a href="tel:+9647701873439" class="doctor-phone-link" dir="ltr">+964 770 187 3439</a>
+                  <a href="tel:+9647501873430" class="doctor-phone-link" dir="ltr">+964 750 187 3430</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-footer">
+              <a href="tel:+9647701873439" class="btn btn-primary doctor-cta-call">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <span data-i18n="btnCallClinic">Call Clinic</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Julia+Tower+Ibrahim+Pasha+Sulaymaniyah" target="_blank" rel="noopener noreferrer" class="btn btn-outline doctor-cta-dir">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span data-i18n="btnGetDirections">Get Directions</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               DOCTOR 2: Dr. Zamdar Hama Rasool Karim
+               ========================================== -->
+          <article class="doctor-card" data-location="city-center" data-specialties="child,board" data-search-terms="dr zamdar hama rasool karim consultant psychiatrist mental health center sulaymaniyah دکتۆر زامدار حەمە ڕەسوڵ کەریم ڕاوێژکار و پسپۆڕی دەروونی د. زامدار حمه رسول كريم">
+            <div class="doctor-card-header">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/doctors/dr-zamdar-hama.jpg" alt="Dr. Zamdar Hama Rasool Karim" class="doctor-avatar-img" loading="lazy">
+              </div>
+              <div class="doctor-header-info">
+                <h3 class="doctor-name" data-i18n="doc2Name">Dr. Zamdar Hama Rasool Karim</h3>
+                <p class="doctor-spec-title" data-i18n="doc2Title">Consultant Psychiatrist</p>
+                <div class="doctor-tags-row">
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span data-i18n="filterLocationCenter">City Center</span>
+                  </span>
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                    <span data-i18n="badgePsychiatrist">Psychiatrist</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-body">
+              <div class="doctor-clinic-item">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M12 7v6"/><path d="M9 10h6"/></svg>
+                <span data-i18n="doc2Clinic">Dr. Zamdar Mental Health Center, Sulaymaniyah</span>
+              </div>
+              <div class="doctor-phones-item">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <div class="doctor-phones-links">
+                  <a href="tel:07707261135" class="doctor-phone-link" dir="ltr">0770 726 1135</a>
+                  <a href="tel:07701583111" class="doctor-phone-link" dir="ltr">0770 158 3111</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-footer">
+              <a href="tel:07707261135" class="btn btn-primary doctor-cta-call">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <span data-i18n="btnCallClinic">Call Clinic</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Sulaymaniyah+Mental+Health+Center" target="_blank" rel="noopener noreferrer" class="btn btn-outline doctor-cta-dir">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span data-i18n="btnGetDirections">Get Directions</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               DOCTOR 3: Dr. Nashmeel Rasool Hama Amin
+               ========================================== -->
+          <article class="doctor-card" data-location="ibrahim-pasha" data-specialties="adult,child,board" data-search-terms="dr nashmeel rasool hama amin specialist psychiatrist fibms chro medical tower ibrahim pasha sulaymaniyah دکتۆر نەشمیل ڕەسوڵ حەمەئەمین پسپۆڕی دەروونی بۆردی عێراقی تەلاری چڕۆ د. نشميل رسول حمه أمين">
+            <div class="doctor-card-header">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/doctors/dr-nashmeel-rasool.jpg" alt="Dr. Nashmeel Rasool Hama Amin" class="doctor-avatar-img" loading="lazy">
+              </div>
+              <div class="doctor-header-info">
+                <h3 class="doctor-name" data-i18n="doc3Name">Dr. Nashmeel Rasool Hama Amin</h3>
+                <p class="doctor-spec-title" data-i18n="doc3Title">Specialist Psychiatrist</p>
+                <div class="doctor-tags-row">
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span data-i18n="filterLocationPasha">Ibrahim Pasha St</span>
+                  </span>
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                    <span data-i18n="badgePsychiatrist">Psychiatrist</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-body">
+              <div class="doctor-clinic-item">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M12 7v6"/><path d="M9 10h6"/></svg>
+                <span data-i18n="doc3Clinic">Chro Medical Tower, 3rd Floor, Ibrahim Pasha St, Sulaymaniyah</span>
+              </div>
+              <div class="doctor-phones-item">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <div class="doctor-phones-links">
+                  <a href="tel:07709924926" class="doctor-phone-link" dir="ltr">0770 992 4926</a>
+                  <a href="tel:07501755815" class="doctor-phone-link" dir="ltr">0750 175 5815</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-footer">
+              <a href="tel:07709924926" class="btn btn-primary doctor-cta-call">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <span data-i18n="btnCallClinic">Call Clinic</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Chro+Tower+Ibrahim+Pasha+Sulaymaniyah" target="_blank" rel="noopener noreferrer" class="btn btn-outline doctor-cta-dir">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span data-i18n="btnGetDirections">Get Directions</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               DOCTOR 4: Dr. Rebwar Gharib Hama
+               ========================================== -->
+          <article class="doctor-card" data-location="ibrahim-pasha" data-specialties="adult,board" data-search-terms="dr rebwar gharib hama specialist psychiatric medicine board certified hamburg university rawa medical complex ibrahim pasha sulaymaniyah دکتۆر ڕێبوار غەریب حەمە بۆرد زانکۆی هامبۆرگ تەلاری پزیشکی ڕەوا د. ريبوار غريب حمه">
+            <div class="doctor-card-header">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/doctors/dr-rebwar-gharib.jpg" alt="Dr. Rebwar Gharib Hama" class="doctor-avatar-img" loading="lazy">
+              </div>
+              <div class="doctor-header-info">
+                <h3 class="doctor-name" data-i18n="doc4Name">Dr. Rebwar Gharib Hama</h3>
+                <p class="doctor-spec-title" data-i18n="doc4Title">Specialist Psychiatrist</p>
+                <div class="doctor-tags-row">
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span data-i18n="filterLocationPasha">Ibrahim Pasha St</span>
+                  </span>
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                    <span data-i18n="badgePsychiatrist">Psychiatrist</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-body">
+              <div class="doctor-clinic-item">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M12 7v6"/><path d="M9 10h6"/></svg>
+                <span data-i18n="doc4Clinic">Rawa Medical Complex, Ibrahim Pasha St, Sulaymaniyah</span>
+              </div>
+              <div class="doctor-phones-item">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <div class="doctor-phones-links">
+                  <a href="tel:07501034989" class="doctor-phone-link" dir="ltr">0750 103 4989</a>
+                  <a href="tel:07713348989" class="doctor-phone-link" dir="ltr">0771 334 8989</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-footer">
+              <a href="tel:07501034989" class="btn btn-primary doctor-cta-call">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <span data-i18n="btnCallClinic">Call Clinic</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Rawa+Building+Ibrahim+Pasha+Sulaymaniyah" target="_blank" rel="noopener noreferrer" class="btn btn-outline doctor-cta-dir">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span data-i18n="btnGetDirections">Get Directions</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               DOCTOR 5: Dr. Afram Hassan
+               ========================================== -->
+          <article class="doctor-card" data-location="baranan" data-specialties="adult" data-search-terms="dr afram hassan mental health psychiatric specialist baranan sheikh farid mosque astarah pharmacy sulaymaniyah دکتۆر ئەفرام حەسەن پسپۆڕی نەخۆشییە دەروونییەکان بەڕانان مزگەوتی شێخ فەرید دەرمانخانەی ئەستێرە د. أفرام حسن">
+            <div class="doctor-card-header">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/doctors/dr-afram-hassan.jpg" alt="Dr. Afram Hassan" class="doctor-avatar-img" loading="lazy">
+              </div>
+              <div class="doctor-header-info">
+                <h3 class="doctor-name" data-i18n="doc5Name">Dr. Afram Hassan</h3>
+                <p class="doctor-spec-title" data-i18n="doc5Title">Specialist Psychiatrist</p>
+                <div class="doctor-tags-row">
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span data-i18n="filterLocationBaranan">Baranān</span>
+                  </span>
+                  <span class="doctor-badge">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                    <span data-i18n="badgePsychiatrist">Psychiatrist</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-body">
+              <div class="doctor-clinic-item">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M12 7v6"/><path d="M9 10h6"/></svg>
+                <span data-i18n="doc5Clinic">Baranān, Near Sheikh Farid Mosque, Sulaymaniyah</span>
+              </div>
+              <div class="doctor-phones-item">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <div class="doctor-phones-links">
+                  <a href="tel:07707726969" class="doctor-phone-link" dir="ltr">0770 772 6969</a>
+                  <a href="tel:07707283131" class="doctor-phone-link" dir="ltr">0770 728 3131</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="doctor-card-footer">
+              <a href="tel:07707726969" class="btn btn-primary doctor-cta-call">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z"/></svg>
+                <span data-i18n="btnCallClinic">Call Clinic</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Baranan+Sheikh+Farid+Mosque+Sulaymaniyah" target="_blank" rel="noopener noreferrer" class="btn btn-outline doctor-cta-dir">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span data-i18n="btnGetDirections">Get Directions</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Empty State (Shown when 0 cards match) -->
+          <div id="doctors-empty-state" class="doctors-empty-state" style="display: none;">
+            <p data-i18n="doctorsEmptyResult">No specialists found matching your search. Please clear filters to see all doctors.</p>
+            <button type="button" id="btn-reset-filters" class="btn btn-primary" data-i18n="resetFiltersBtn">Reset Filters</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ======================================================================
+       SITE FOOTER (ESTABLISHED DESIGN WITH EXACT CONTACTS & LOCATION)
+       ====================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-centered-wrapper">
+      <div class="footer-brand-crest">
+        <img class="footer-brand-logo-img" src="assets/zhyanawa-logo-white.png" alt="Zhyanawa" width="56" height="48" onerror="this.onerror=null; this.src='assets/zhyanawa-logo.png';">
+      </div>
+
+      <h2 class="footer-main-title" data-i18n="footerConnectTitle">Connect With Zhyanawa</h2>
+      <p class="footer-main-subtitle" data-i18n="footerConnectDesc">Compassionate mental health support and ethical AI. Get in touch with us directly:</p>
+
+      <!-- Direct Quick Action Contacts (Phone & Email Only) -->
+      <div class="footer-direct-icons" aria-label="Direct contact methods">
+        <a class="footer-direct-btn" href="tel:07701456780" aria-label="Call 07701456780" title="07701456780">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 2a9 9 0 0 1 9 9" />
+            <path d="M13 6a5 5 0 0 1 5 5" />
+            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+          </svg>
+        </a>
+        <a class="footer-direct-btn" href="mailto:info@zhyanawa.com" aria-label="Email info@zhyanawa.com" title="info@zhyanawa.com">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Website Core Information: Email, Phone & Legal Links -->
+      <div class="footer-info-details">
+        <div class="footer-links-row">
+          <a class="footer-text-link" href="mailto:info@zhyanawa.com">info@zhyanawa.com</a>
+          <span class="footer-dot-divider" aria-hidden="true">•</span>
+          <a class="footer-text-link" href="tel:07701456780">07701456780</a>
+          <span class="footer-dot-divider" aria-hidden="true">•</span>
+<a class="footer-text-link" href="/privacy" data-i18n="footerLegalLinks">Privacy Policy & Legal</a>
+        </div>
+        <p class="footer-serving-text" style="font-size: 0.85rem; opacity: 0.85; margin-top: 8px;" data-i18n="footerServing">Serving Sulaymaniyah, Sulaymaniyah Governorate, Iraq</p>
+      </div>
+
+      <!-- Automatically Renewing Annual Copyright -->
+      <div class="footer-copyright-row">
+        <span data-i18n="footerCopyright">© <span class="auto-year">2026</span> Zhyanawa. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       AUTHENTICATION & ANONYMOUS GUEST MODAL
+       ====================================================================== -->
+  <div class="modal-overlay" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="auth-modal-close" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="modal-header-centered">
+        <img class="modal-brand-logo" src="assets/zhyanawa-logo.png" alt="Zhyanawa AI" width="64" height="55">
+        <h2 id="auth-modal-title" data-i18n="authModalTitle">LOGIN OR ANONYMOUS ACCESS</h2>
+      </div>
+
+      <div class="auth-columns-grid">
+        <div class="auth-panel-registered">
+          <div class="auth-tab-buttons" role="tablist">
+            <button class="auth-tab-btn is-active" id="tab-login" role="tab" aria-selected="true" type="button" data-auth-mode="login" data-i18n="tabLogin">Log In</button>
+            <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" type="button" data-auth-mode="signup" data-i18n="tabCreateAccount">Create Account</button>
+          </div>
+
+          <form id="auth-form">
+            <div class="auth-form-fields">
+              <div class="form-group" id="group-fullname" style="display: none;">
+                <label class="sr-only" for="auth-fullname" data-i18n="authFullNamePlaceholder">Full Name</label>
+                <input class="form-input" id="auth-fullname" type="text" placeholder="Full Name" data-i18n-placeholder="authFullNamePlaceholder">
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="auth-email" data-i18n="authEmailPlaceholder">Email Address</label>
+                <input class="form-input" id="auth-email" type="email" required placeholder="Email Address" data-i18n-placeholder="authEmailPlaceholder">
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="auth-password" data-i18n="authPasswordPlaceholder">Password</label>
+                <input class="form-input" id="auth-password" type="password" required placeholder="Password" data-i18n-placeholder="authPasswordPlaceholder">
+              </div>
+
+              <div class="form-group" id="group-confirm-pass" style="display: none;">
+                <label class="sr-only" for="auth-confirm-password" data-i18n="authConfirmPassword">Confirm Password</label>
+                <input class="form-input" id="auth-confirm-password" type="password" placeholder="Confirm Password" data-i18n-placeholder="authConfirmPassword">
+              </div>
+
+              <div class="form-row-forgot" id="row-forgot-pass">
+                <a class="forgot-link" href="#" id="auth-forgot-link" data-i18n="authForgotPass">Forgot password?</a>
+              </div>
+
+              <button class="btn btn-primary btn-submit-auth" id="btn-submit-credentials" type="submit">
+                <span id="btn-auth-label" data-i18n="tabLogin">Log In</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="auth-panel-anonymous">
+          <div class="anonymous-card-content">
+            <div class="anon-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h3 class="anon-title" data-i18n="authAnonymousTitle">ANONYMOUS & PRIVATE ACCESS</h3>
+            <p class="anon-description" data-i18n="authAnonymousDesc">100% confidential. No email, no name required. Instant, secure support without revealing your identity. Chat records are never stored after your session ends.</p>
+
+            <button class="btn btn-primary btn-guest-launch" id="btn-launch-guest" type="button" data-action="launch-guest">
+              <span data-i18n="authGuestBtn">Continue as Anonymous Guest</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <span>Notification</span>
+  </div>
+
+  <script src="js/i18n.js?v=22"></script>
+  <script src="js/landing.js?v=22"></script>
+  <script src="js/doctor-filters.js?v=21"></script>
+  <script src="js/doctors.js?v=21"></script>
+</body>
+</html>

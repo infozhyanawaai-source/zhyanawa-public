@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Doctor Summary Access | Zhyanawa AI</title>
+  <link rel="icon" href="assets/zhyanawa-logo-symbol.png" type="image/png">
+  <link rel="stylesheet" href="css/doctor-summary.css?v=22">
+</head>
+<body>
+  <header class="portal-header">
+    <a href="/" class="portal-brand"><img src="assets/zhyanawa-logo-primary.jpg" alt="Zhyanawa AI"><span><strong>Zhyanawa AI</strong><small data-doctor-copy="brand">Doctor summary portal</small></span></a>
+    <a href="/doctors" data-doctor-copy="directory">Doctor directory</a>
+  </header>
+
+  <main class="portal-main">
+    <section class="access-card" id="access-panel" aria-labelledby="access-title">
+      <p class="eyebrow" data-doctor-copy="portalEyebrow">PATIENT-CONSENTED CLINICAL HANDOFF</p>
+      <h1 id="access-title" data-doctor-copy="portalTitle">View a patient-shared summary</h1>
+      <p data-doctor-copy="portalIntro">Enter the private code provided by the patient. A valid code generates a clinical handoff from saved Zhyanawa conversations.</p>
+      <form id="access-form">
+        <label for="access-code" data-doctor-copy="accessLabel">Patient access code</label>
+        <input id="access-code" name="code" type="text" inputmode="text" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" maxlength="18" placeholder="ZHY-XXXX-XXXX-XXXX" required>
+        <label for="summary-language" data-doctor-copy="languageLabel">Summary language</label>
+        <select id="summary-language" name="language"><option value="en">English</option><option value="ckb">کوردی (سۆرانی)</option><option value="ar">العربية</option></select>
+        <p class="form-error" id="access-error" role="alert"></p>
+        <button id="access-submit" type="submit" data-doctor-copy="generate">Generate secure summary</button>
+      </form>
+      <div class="privacy-note" data-doctor-copy="privacy">One-time codes are consumed after a successful view. Reusable codes work until revoked. Confirm patient consent before retaining or sharing this report.</div>
+    </section>
+
+    <section class="summary-card" id="summary-panel" hidden aria-labelledby="summary-title">
+      <div class="summary-header">
+        <div><p class="eyebrow" data-doctor-copy="summaryEyebrow">AI-GENERATED CLINICAL AID</p><h1 id="summary-title" data-doctor-copy="summaryTitle">Patient conversation summary</h1></div>
+        <div class="summary-actions"><button id="print-summary" type="button" data-doctor-copy="print">Print</button><button id="new-code" type="button" data-doctor-copy="another">Use another code</button></div>
+      </div>
+      <dl class="summary-meta">
+        <div><dt data-doctor-copy="patient">Patient</dt><dd id="summary-patient"></dd></div>
+        <div><dt data-doctor-copy="access">Access</dt><dd id="summary-access"></dd></div>
+        <div><dt data-doctor-copy="scope">Source scope</dt><dd id="summary-scope"></dd></div>
+        <div><dt data-doctor-copy="generated">Generated</dt><dd id="summary-date"></dd></div>
+      </dl>
+      <div class="clinical-warning" id="summary-notice"></div>
+      <ol class="summary-lines" id="summary-lines"></ol>
+      <footer data-doctor-copy="footer">This report summarizes self-reported chat material. It does not replace direct history-taking, risk assessment, examination, diagnosis, or treatment planning by a qualified professional.</footer>
+    </section>
+  </main>
+
+  <script src="js/doctor-copy.js?v=22"></script>
+  <script src="js/doctor-summary.js?v=22"></script>
+</body>
+</html>

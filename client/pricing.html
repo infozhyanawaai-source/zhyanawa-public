@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="pageTitlePricing">Pricing — Zhyanawa AI Premium Mental Wellness</title>
+  <meta name="description" content="Affordable mental health and AI therapy subscription plans by Zhyanawa. Upgrade your mental wellness with AI Premium.">
+  <link rel="canonical" href="https://zhyanawa.cyou/pricing">
+  <meta property="og:title" content="Pricing — Zhyanawa AI Premium Mental Wellness">
+  <meta property="og:description" content="Unlock advanced AI therapy features, personalized insights, and priority support.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/zhyanawa-logo-primary.png">
+  <link rel="icon" type="image/png" href="assets/zhyanawa-logo-primary.png">
+  <link rel="apple-touch-icon" href="assets/zhyanawa-logo-primary.png">
+  <link rel="stylesheet" href="css/main.css?v=21">
+  <link rel="stylesheet" href="css/landing.css?v=22">
+</head>
+<body>
+
+  <!-- ======================================================================
+       SITE HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="/" aria-label="Zhyanawa AI — Home">
+        <img class="brand-logo-img" src="assets/zhyanawa-logo.png" alt="Zhyanawa AI" width="44" height="48" onerror="this.onerror=null; this.src='assets/zhyanawa-logo.jpg';">
+        <span class="sr-only" data-i18n="brandSrOnly">Zhyanawa AI</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a class="nav-link" href="/about" data-i18n="navAbout">About Us</a>
+        <a class="nav-link" href="/services" data-i18n="navServices">Our Services</a>
+        <a class="nav-link is-active" href="/pricing" aria-current="page" data-i18n="navPricing">Pricing</a>
+        <a class="nav-link" href="/emergency" data-i18n="navEmergency">Emergency Support</a>
+        <a class="nav-link" href="/doctors" data-i18n="navDoctors">Find Doctors</a>
+        <a class="nav-link" href="/contact" data-i18n="navContact">Contact Us</a>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Language Switcher: EN, KU, AR -->
+        <div class="lang-dropdown" id="language-switcher">
+          <button class="lang-btn" id="language-trigger" type="button" aria-expanded="false" aria-haspopup="listbox" aria-label="Language selection">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9s-1.2 6.5-3.5 9c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"/></svg>
+            <span data-lang-short>EN</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-menu-list" role="listbox" aria-label="Languages">
+            <button class="lang-option-btn is-selected" type="button" role="option" data-lang="en" aria-selected="true"><span>English</span><small>EN</small></button>
+            <button class="lang-option-btn" type="button" role="option" data-lang="ckb" aria-selected="false"><span>کوردی (سۆرانی)</span><small>KU</small></button>
+            <button class="lang-option-btn" type="button" role="option" data-lang="ar" aria-selected="false"><span>العربية</span><small>AR</small></button>
+          </div>
+        </div>
+
+        <button class="btn nav-login-btn" type="button" data-action="open-auth" data-auth-tab="login" data-i18n="navLogin">Log In</button>
+        <button class="btn nav-signup-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="navSignup">Sign Up</button>
+
+        <button class="mobile-nav-toggle" id="mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <div class="mobile-nav-links">
+        <a href="/about" data-i18n="navAbout">About Us</a>
+        <a href="/services" data-i18n="navServices">Our Services</a>
+        <a class="is-active" href="/pricing" data-i18n="navPricing">Pricing</a>
+        <a href="/emergency" data-i18n="navEmergency">Emergency Support</a>
+        <a href="/doctors" data-i18n="navDoctors">Find Doctors</a>
+        <a href="/contact" data-i18n="navContact">Contact Us</a>
+        <div class="mobile-auth-actions" style="display: flex; gap: 10px; margin-top: 14px; width: 100%;">
+          <button class="btn nav-login-btn" type="button" style="flex: 1;" data-action="open-auth" data-auth-tab="login" data-i18n="navLogin">Log In</button>
+          <button class="btn nav-signup-btn" type="button" style="flex: 1;" data-action="open-auth" data-auth-tab="signup" data-i18n="navSignup">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         PRICING SECTION: 5 EMOTIONAL TIERS
+         Daily, Weekly, Monthly, 3-Month, Yearly
+         ====================================================================== -->
+    <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="pricing-header-block">
+          <h1 id="pricing-title" data-i18n="pricingHeroTitle">Thoughtfully Designed Mental Wellness Tiers</h1>
+          <p data-i18n="pricingHeroSub">Choose the emotional companion that fits your life — from immediate crisis relief to lifelong peace of mind with continuous memory.</p>
+        </div>
+
+        <!-- Filter Switcher -->
+        <div class="pricing-tabs-row" role="tablist" aria-label="Plan duration categories">
+          <button class="pricing-tab-btn is-active" type="button" role="tab" aria-selected="true" data-pricing-filter="all">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+            <span data-i18n="pricingFilterAll">All 5 Tiers</span>
+          </button>
+          <button class="pricing-tab-btn" type="button" role="tab" aria-selected="false" data-pricing-filter="short">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span data-i18n="pricingFilterShort">Crisis & Weekly Reset</span>
+          </button>
+          <button class="pricing-tab-btn" type="button" role="tab" aria-selected="false" data-pricing-filter="long">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span data-i18n="pricingFilterLong">Long-Term Journeys</span>
+          </button>
+        </div>
+
+        <!-- 5 Tiers Grid -->
+        <div class="pricing-grid">
+
+          <!-- Card 1: Daily (The Crisis Anchor) -->
+          <article class="pricing-card" data-tier-category="short">
+            <div class="pricing-card-header">
+              <h2 class="pricing-plan-title" data-i18n="planDailyTitle">Daily</h2>
+              <div class="pricing-plan-nickname" data-i18n="planDailyNick">The Crisis Anchor</div>
+              <div class="pricing-tokens-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span data-i18n="planDailyTokens">50,000 Tokens</span>
+              </div>
+              <div class="pricing-price-box">
+                <span class="pricing-plan-price" data-i18n="planDailyPrice">$0.49</span>
+                <span class="pricing-plan-period" data-i18n="planDailyPeriod">/ day</span>
+              </div>
+              <p class="pricing-plan-sub" data-i18n="planDailySub">A judgment-free space whenever sudden anxiety or emotional overload hits.</p>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planDailyF1">A judgment-free space during sudden anxiety or overload</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planDailyF2">24-hour instant, empathetic listening</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planDailyF3">Guided somatic breathing exercises to reset your nervous system</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planDailyF4">Automated 24-hour chat clearing to safeguard your privacy</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planDailyF5">Real-time safety protocols that gently step in during high-distress moments</span>
+              </li>
+            </ul>
+            <button class="pricing-cta-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="planDailyCta">Get Crisis Anchor</button>
+          </article>
+
+          <!-- Card 2: Weekly (The Reset Journey) -->
+          <article class="pricing-card" data-tier-category="short">
+            <div class="pricing-card-header">
+              <h2 class="pricing-plan-title" data-i18n="planWeeklyTitle">Weekly</h2>
+              <div class="pricing-plan-nickname" data-i18n="planWeeklyNick">The Reset Journey</div>
+              <div class="pricing-tokens-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span data-i18n="planWeeklyTokens">300,000 Tokens</span>
+              </div>
+              <div class="pricing-price-box">
+                <span class="pricing-plan-price" data-i18n="planWeeklyPrice">$1.99</span>
+                <span class="pricing-plan-period" data-i18n="planWeeklyPeriod">/ week</span>
+              </div>
+              <p class="pricing-plan-sub" data-i18n="planWeeklySub">A dedicated companion to help you navigate stressful workweeks and quiet overactive thoughts.</p>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planWeeklyF1">A dedicated companion to navigate stressful workweeks</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planWeeklyF2">7-day emotional cycle and mood tracking to identify burnout triggers</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planWeeklyF3">Evening wind-down reflections to quiet overactive thoughts & ease insomnia</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planWeeklyF4">A warm end-of-week summary celebrating resilience and emotional wins</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planWeeklyF5">Somatic and CBT grounding exercises throughout your week</span>
+              </li>
+            </ul>
+            <button class="pricing-cta-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="planWeeklyCta">Start Reset Journey</button>
+          </article>
+
+          <!-- Card 3: Monthly (Most Popular - Your Daily Sanctuary) -->
+          <article class="pricing-card is-featured" data-tier-category="long">
+            <div class="pricing-badge-wrapper">
+              <span class="pricing-badge" data-i18n="badgeMostPopular">Most Popular</span>
+            </div>
+            <div class="pricing-card-header">
+              <h2 class="pricing-plan-title" data-i18n="planMonthlyTitle">Monthly</h2>
+              <div class="pricing-plan-nickname" data-i18n="planMonthlyNick">Your Daily Sanctuary</div>
+              <div class="pricing-tokens-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span data-i18n="planMonthlyTokens">1,500,000 Tokens</span>
+              </div>
+              <div class="pricing-price-box">
+                <span class="pricing-plan-price" data-i18n="planMonthlyPrice">$5.99</span>
+                <span class="pricing-plan-period" data-i18n="planMonthlyPeriod">/ month</span>
+              </div>
+              <p class="pricing-plan-sub" data-i18n="planMonthlySub">A long-term empathetic companion with continuous memory context, meaning you never have to re-explain your background or struggles.</p>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planMonthlyF1">Continuous memory context (never re-explain your background or struggles)</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planMonthlyF2">Deep mood-mapping to uncover emotional patterns</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planMonthlyF3">Evidence-based CBT reflection prompts to reframe negative thought spirals</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planMonthlyF4">Uplifting morning affirmations tailored to your previous day's conversations</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planMonthlyF5">Zero response latency with dedicated compute even during peak hours</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planMonthlyF6">Full access to Guided 4-7-8 Breathing & Mood Toolkit</span>
+              </li>
+            </ul>
+            <button class="pricing-cta-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="planMonthlyCta">Enter Your Sanctuary</button>
+          </article>
+
+          <!-- Card 4: 3-Month (Sustained Growth - 16% Off) -->
+          <article class="pricing-card" data-tier-category="long">
+            <div class="pricing-badge-wrapper">
+              <span class="pricing-badge" data-i18n="badgeSave16">16% Off</span>
+            </div>
+            <div class="pricing-card-header">
+              <h2 class="pricing-plan-title" data-i18n="planQuarterlyTitle">3-Month</h2>
+              <div class="pricing-plan-nickname" data-i18n="planQuarterlyNick">Sustained Growth</div>
+              <div class="pricing-tokens-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span data-i18n="planQuarterlyTokens">5,000,000 Tokens</span>
+              </div>
+              <div class="pricing-price-box">
+                <span class="pricing-plan-price" data-i18n="planQuarterlyPrice">$14.99</span>
+                <span class="pricing-plan-period" data-i18n="planQuarterlyPeriod">/ 3 months ($4.99/mo)</span>
+              </div>
+              <p class="pricing-plan-sub" data-i18n="planQuarterlySub">A structured quarterly journey designed to break chronic anxiety cycles and cultivate lasting self-compassion.</p>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planQuarterlyF1">Structured quarterly journey to break chronic anxiety cycles</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planQuarterlyF2">Detailed quarterly progress reviews with visual emotional wellness charts</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planQuarterlyF3">Customizable personas (gentle listener, wellness coach, clinical guide)</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planQuarterlyF4">Interpersonal relationship & emotional boundary coaching</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planQuarterlyF5">Priority API queue access with deeper contextual reasoning</span>
+              </li>
+            </ul>
+            <button class="pricing-cta-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="planQuarterlyCta">Commit to Growth</button>
+          </article>
+
+          <!-- Card 5: Yearly (Lifelong Peace of Mind - 30% Off) -->
+          <article class="pricing-card is-best-value" data-tier-category="long">
+            <div class="pricing-badge-wrapper">
+              <span class="pricing-badge" data-i18n="badgeSave30">30% Off • Best Value</span>
+            </div>
+            <div class="pricing-card-header">
+              <h2 class="pricing-plan-title" data-i18n="planYearlyTitle">Yearly</h2>
+              <div class="pricing-plan-nickname" data-i18n="planYearlyNick">Lifelong Peace of Mind</div>
+              <div class="pricing-tokens-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span data-i18n="planYearlyTokens">25,000,000 Tokens</span>
+              </div>
+              <div class="pricing-price-box">
+                <span class="pricing-plan-price" data-i18n="planYearlyPrice">$49.99</span>
+                <span class="pricing-plan-period" data-i18n="planYearlyPeriod">/ year ($4.16/mo)</span>
+              </div>
+              <p class="pricing-plan-sub" data-i18n="planYearlySub">The ultimate commitment to your mental health: 365 days of deep personal support without limits.</p>
+            </div>
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planYearlyF1">365-day deeply personalized confidant that knows your history, values, and triumphs</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planYearlyF2">Interactive Personal Growth Timeline mapping your emotional transformation</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planYearlyF3">Proactive seasonal check-ins to support you during vulnerable periods (e.g. winter blues)</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planYearlyF4">Limitless peace of mind without worrying about token runouts</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg class="pricing-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span data-i18n="planYearlyF5">Dedicated VIP priority support and early access to all clinical AI models</span>
+              </li>
+            </ul>
+            <button class="pricing-cta-btn" type="button" data-action="open-auth" data-auth-tab="signup" data-i18n="planYearlyCta">Claim Lifelong Peace</button>
+          </article>
+
+        </div>
+
+        <!-- Transparent Token Economics Explainer -->
+        <div class="pricing-tokens-explainer">
+          <div class="pricing-explainer-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span data-i18n="pricingTokensBadge">Transparent Token Economics</span>
+          </div>
+          <h3 class="pricing-explainer-title" data-i18n="pricingTokensInfoTitle">Understanding Tokens & Message Volume</h3>
+          <p class="pricing-explainer-desc" data-i18n="pricingTokensInfoDesc">Tokens power every interaction with your AI confidant. 50,000 tokens equal roughly 100 deep messages, while 1,500,000 tokens power over 3,000 therapeutic exchanges with uninterrupted continuous memory.</p>
+
+          <div class="pricing-explainer-grid">
+            <div class="pricing-explainer-card">
+              <h4 data-i18n="pricingTokensCard1Title">50K - 300K Tokens</h4>
+              <p data-i18n="planTokensCard1Desc">Ideal for targeted crisis stabilization or weekly relief (100 - 600+ deep messages).</p>
+            </div>
+            <div class="pricing-explainer-card">
+              <h4 data-i18n="pricingTokensCard2Title">1.5M - 5M Tokens</h4>
+              <p data-i18n="planTokensCard2Desc">Continuous monthly to quarterly memory retaining your personal history (3,000 - 10,000+ exchanges).</p>
+            </div>
+            <div class="pricing-explainer-card">
+              <h4 data-i18n="pricingTokensCard3Title">25M Tokens</h4>
+              <p data-i18n="planTokensCard3Desc">Year-round unconstrained emotional sanctuary with VIP priority compute.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guarantees Bar -->
+        <div class="pricing-guarantees-bar">
+          <div class="pricing-guarantee-item">
+            <div class="pricing-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+            </div>
+            <div class="pricing-guarantee-text" data-i18n="pricingGuar1">100% Anonymous Guest or Registered Mode</div>
+          </div>
+          <div class="pricing-guarantee-item">
+            <div class="pricing-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+            </div>
+            <div class="pricing-guarantee-text" data-i18n="pricingGuar2">Zero Commercial Data Brokering or Ad Tracking</div>
+          </div>
+          <div class="pricing-guarantee-item">
+            <div class="pricing-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2Z"/><path d="M12 12 2.1 10.5"/></svg>
+            </div>
+            <div class="pricing-guarantee-text" data-i18n="pricingGuar3">Continuous Memory Retention (Monthly & Above)</div>
+          </div>
+          <div class="pricing-guarantee-item">
+            <div class="pricing-guarantee-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="pricing-guarantee-text" data-i18n="pricingGuar4">No Waitlists, Instant 24/7 Empathetic Access</div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="pricing-faq-section">
+          <div class="pricing-faq-header">
+            <h2 class="pricing-faq-title" data-i18n="pricingFaqTitle">Frequently Asked Questions</h2>
+          </div>
+          <div class="pricing-faq-list">
+            <div class="pricing-faq-item is-open">
+              <button class="pricing-faq-question" type="button" aria-expanded="true">
+                <span data-i18n="pricingFaqQ1">What is continuous memory and why does it matter?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="pricing-faq-answer" data-i18n="pricingFaqA1">
+                Continuous memory allows Zhyanawa to remember your background, triggers, and previous discussions across sessions. You never have to repeat your life story, leading to vastly deeper, more compassionate, and personalized therapeutic dialogue.
+              </div>
+            </div>
+
+            <div class="pricing-faq-item">
+              <button class="pricing-faq-question" type="button" aria-expanded="false">
+                <span data-i18n="pricingFaqQ2">Can I use Zhyanawa 100% anonymously?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="pricing-faq-answer" data-i18n="pricingFaqA2">
+                Yes. Every tier is fully accessible via our Anonymous Guest session. You never have to provide your legal name, email, or telephone number.
+              </div>
+            </div>
+
+            <div class="pricing-faq-item">
+              <button class="pricing-faq-question" type="button" aria-expanded="false">
+                <span data-i18n="pricingFaqQ3">Can I switch or cancel plans at any time?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="pricing-faq-answer" data-i18n="pricingFaqA3">
+                Yes, absolutely. You can upgrade, downgrade, or cancel your subscription anytime with a single click. There are no lock-in contracts or hidden cancellation penalties.
+              </div>
+            </div>
+
+            <div class="pricing-faq-item">
+              <button class="pricing-faq-question" type="button" aria-expanded="false">
+                <span data-i18n="pricingFaqQ4">What happens if I don't use all my tokens immediately?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="pricing-faq-answer" data-i18n="pricingFaqA4">
+                Your token balance remains valid for the entirety of your active billing period. You can converse at your own pace without arbitrary daily throttling.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER (SAVOX-STYLE CENTERED DESIGN WITH BRAND PALETTE)
+       ====================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-centered-wrapper">
+      <div class="footer-brand-crest">
+        <img class="footer-brand-logo-img" src="assets/zhyanawa-logo-white.png" alt="Zhyanawa" width="56" height="48" onerror="this.onerror=null; this.src='assets/zhyanawa-logo.png';">
+      </div>
+
+      <h2 class="footer-main-title" data-i18n="footerConnectTitle">Connect With Zhyanawa</h2>
+      <p class="footer-main-subtitle" data-i18n="footerConnectDesc">Compassionate mental health support and ethical AI. Get in touch with us directly:</p>
+
+      <!-- Direct Quick Action Contacts (Phone & Email Only) -->
+      <div class="footer-direct-icons" aria-label="Direct contact methods">
+        <a class="footer-direct-btn" href="tel:07701456780" aria-label="Call 07701456780" title="07701456780">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 2a9 9 0 0 1 9 9" />
+            <path d="M13 6a5 5 0 0 1 5 5" />
+            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+          </svg>
+        </a>
+        <a class="footer-direct-btn" href="mailto:info@zhyanawa.com" aria-label="Email info@zhyanawa.com" title="info@zhyanawa.com">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Website Core Information: Inquiries Email, Phone & Legal Links -->
+      <div class="footer-info-details">
+        <div class="footer-links-row">
+          <a class="footer-text-link" href="mailto:info@zhyanawa.com">info@zhyanawa.com</a>
+          <span class="footer-dot-divider" aria-hidden="true">•</span>
+          <a class="footer-text-link" href="tel:07701456780">07701456780</a>
+          <span class="footer-dot-divider" aria-hidden="true">•</span>
+          <a class="footer-text-link" href="/privacy" data-i18n="footerLegalLinks">Privacy Policy & Legal</a>
+        </div>
+      </div>
+
+      <!-- Automatically Renewing Annual Copyright -->
+      <div class="footer-copyright-row">
+        <span data-i18n="footerCopyright">© <span class="auto-year">2026</span> Zhyanawa. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       AUTHENTICATION MODAL
+       ====================================================================== -->
+  <div class="modal-overlay" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close" type="button" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="modal-header-centered">
+        <img class="modal-brand-logo" src="assets/zhyanawa-logo.png" alt="Zhyanawa AI" width="64" height="55">
+        <h2 id="auth-modal-title" data-i18n="authModalTitle">LOGIN OR ANONYMOUS ACCESS</h2>
+      </div>
+
+      <div class="auth-columns-grid">
+        <!-- Left Panel: Log In / Create Account -->
+        <div class="auth-panel-registered">
+          <div class="auth-tab-buttons" role="tablist">
+            <button class="auth-tab-btn is-active" id="tab-login" role="tab" aria-selected="true" type="button" data-auth-mode="login" data-i18n="tabLogin">Log In</button>
+            <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" type="button" data-auth-mode="signup" data-i18n="tabCreateAccount">Create Account</button>
+          </div>
+
+          <form id="auth-form">
+            <div class="auth-form-fields">
+              <div class="form-group" id="group-fullname" style="display: none;">
+                <label class="sr-only" for="auth-fullname" data-i18n="authFullNamePlaceholder">Full Name</label>
+                <input class="form-input" id="auth-fullname" type="text" placeholder="Full Name" data-i18n-placeholder="authFullNamePlaceholder">
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="auth-email" data-i18n="authEmailPlaceholder">Email Address</label>
+                <input class="form-input" id="auth-email" type="email" required placeholder="Email Address" data-i18n-placeholder="authEmailPlaceholder">
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="auth-password" data-i18n="authPasswordPlaceholder">Password</label>
+                <input class="form-input" id="auth-password" type="password" required placeholder="Password" data-i18n-placeholder="authPasswordPlaceholder">
+              </div>
+
+              <div class="form-group" id="group-confirm-pass" style="display: none;">
+                <label class="sr-only" for="auth-confirm-password" data-i18n="authConfirmPassword">Confirm Password</label>
+                <input class="form-input" id="auth-confirm-password" type="password" placeholder="Confirm Password" data-i18n-placeholder="authConfirmPassword">
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; font-size: 0.85rem;">
+                <a href="#" id="auth-forgot-link" style="color: var(--color-brand-primary); font-weight: 600;" data-i18n="authForgotPass">Forgot your password?</a>
+              </div>
+
+              <button class="btn btn-primary" id="auth-submit-btn" type="submit" style="width: 100%; margin-top: 8px;" data-i18n="tabLogin">Log In</button>
+            </div>
+          </form>
+
+          <div class="auth-social-row">
+            <span data-i18n="authOrSocial">Or log in with:</span>
+            <div class="auth-social-icons">
+              <button class="social-icon-btn" type="button" aria-label="Sign in with Google">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+              </button>
+              <button class="social-icon-btn" type="button" aria-label="Sign in with Apple">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.65-1.07 1.72-.94 2.74 1 .08 2.02-.49 2.64-1.24z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Panel: Anonymous Guest Access -->
+        <div class="auth-panel-anonymous">
+          <div>
+            <h3 data-i18n="authAnonymousTitle">ANONYMOUS GUEST ACCESS</h3>
+            <p data-i18n="authAnonymousDesc">100% Privacy & Anonymity. No email, no name. Immediate confidential support without identity. Guest profiles do not store long-term history but are instantly available.</p>
+            <div class="anonymous-icons-row">
+              <div class="anonymous-icon-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span data-i18n="guestUserLabel">Instant Guest Session</span>
+              </div>
+              <div class="anonymous-icon-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <span data-i18n="guestShieldLabel">Encrypted & Secure</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-guest-full" id="btn-guest-enter" type="button" data-i18n="authGuestBtn">CONTINUE AS ANONYMOUS GUEST</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <span>Notification</span>
+  </div>
+
+  <script src="js/i18n.js?v=22"></script>
+  <script src="js/landing.js?v=22"></script>
+
+  <!-- Interactive Filter Tabs & FAQ Accordion Script -->
+  <script src="js/pricing-filters.js?v=22"></script>
+</body>
+</html>

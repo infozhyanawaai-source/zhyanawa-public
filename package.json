@@ -1,0 +1,12 @@
+{
+  "name": "zhyanawa-public",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Zhyanawa AI website preview connected to the official HTTPS service",
+  "scripts": {
+    "start": "node preview-server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

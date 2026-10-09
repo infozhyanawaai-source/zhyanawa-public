@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.pri
+*.pem
+*.key
+*-backup-*
+.DS_Store
+Thumbs.db
